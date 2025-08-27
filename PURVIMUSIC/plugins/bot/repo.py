@@ -6,20 +6,7 @@ from PURVIMUSIC.utils.errors import capture_err
 import httpx 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-start_txt = """**
-✪ ωεℓᴄσмє fσʀ ᴀℓᴘʜᴀ ʀєρσѕ ✪
- 
- ➲ ᴀʟʟ ʀᴇᴘᴏ ᴇᴀsɪʟʏ ᴅᴇᴘʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴇʀʀᴏʀ ✰
- 
- ➲ ɴᴏ ʜᴇʀᴏᴋᴜ ʙᴀɴ ɪssᴜᴇ ✰
- 
- ➲ ɴᴏ ɪᴅ ʙᴀɴ ɪssᴜᴇ ✰
- 
- ➲ᴜɴʟɪᴍɪᴛᴇᴅ ᴅʏɴᴏs ✰
- 
- ➲ ʀᴜɴ 24x7 ʟᴀɢ ғʀᴇᴇ ᴡɪᴛʜᴏᴜᴛ sᴛᴏᴘ ✰
- 
- ► ɪғ ʏᴏᴜ ғᴀᴄᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ sᴇɴᴅ ss
+start_txt = """** WELCOME TO DEVIL BOTS 
 **"""
 
 
@@ -29,29 +16,17 @@ start_txt = """**
 async def start(_, msg):
     buttons = [
         [ 
-          InlineKeyboardButton("𝗔𝗗𝗗 𝗠𝗘", url=f"https://t.me/purvi_music_bot?startgroup=true")
+          InlineKeyboardButton("𝗔𝗗𝗗 𝗠𝗘", url=f"https://t.me/Komal_music_bot?startgroup=true")
         ],
         [
-          InlineKeyboardButton("𝗛𝗘𝗟𝗣", url="https://t.me/purvi_updates"),
-          InlineKeyboardButton("𝗢𝗪𝗡𝗘𝗥", url="https://t.me/ll_ALPHA_BABY_lll"),
+          InlineKeyboardButton("𝗛𝗘𝗟𝗣", url="https://t.me/KomalMusicUpdate"),
+          InlineKeyboardButton("𝗢𝗪𝗡𝗘𝗥", url="https://t.me/Ankitgupta214"),
           ],
-               [
-                InlineKeyboardButton("𝗕𝗔𝗡 𝗔𝗟𝗟 𝗕𝗢𝗧", url=f"https://github.com/TEAMPURVI/ALPHA_BANALL"),
+            
 
 ],
-[
-              InlineKeyboardButton("𝗨𝗦𝗘𝗥𝗕𝗢𝗧", url=f"https://github.com/TEAMPURVI/ALPHA_USERBOT"),
-              InlineKeyboardButton("︎𝗣𝗨𝗥𝗩𝗜 𝗠𝗨𝗦𝗜𝗖", url=f"https://github.com/TEAMPURVI/PURVI_MUSIC"),
-              ],
-              [
-              InlineKeyboardButton("𝗔𝗟𝗣𝗛𝗔 𝗠𝗨𝗦𝗜𝗖", url=f"https://github.com/TEAMPURVI/ALPHA_MUSIC"),
-InlineKeyboardButton("𝗦𝗧𝗥𝗜𝗡𝗚 𝗕𝗢𝗧 ", url=f"https://github.com/TEAMPURVI/PURVI_STRING"),
-],
-[
-InlineKeyboardButton("𝗦𝗣𝗔𝗠 𝗕𝗢𝗧", url=f"https://github.com/TEAMPURVI/ALPHA_SPAM"),
-InlineKeyboardButton("𝗖𝗛𝗔𝗧 𝗕𝗢𝗧", url=f"https://github.com/TEAMPURVI/PURVI_CHAT"),
-    ]]
-    
+
+             
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
@@ -68,7 +43,7 @@ InlineKeyboardButton("𝗖𝗛𝗔𝗧 𝗕𝗢𝗧", url=f"https://github.com/T
 @capture_err
 async def repo(_, message):
     async with httpx.AsyncClient() as client:
-        response = await client.get("https://api.github.com/repos/TEAMPURVI/PURVI_MUSIC/contributors")
+        response = await client.get("https://api.github.com/repos/Ankit656kp/contributors")
     
     if response.status_code == 200:
         users = response.json()
@@ -78,7 +53,7 @@ async def repo(_, message):
             list_of_users += f"{count}. [{user['login']}]({user['html_url']})\n"
             count += 1
 
-        text = f"""[𝖱𝖤𝖯𝖮 𝖫𝖨𝖭𝖪](https://github.com/TEAMPURVI/PURVI_MUSIC) | [𝖦𝖱𝖮𝖴𝖯](https://t.me/PURVI_UPDATES)
+        text = f"""[𝖱𝖤𝖯𝖮 𝖫𝖨𝖭𝖪](https://github.com/Ankit656kp) | [𝖦𝖱𝖮𝖴𝖯](https://t.me/KomalMusicUpdate)
 | 𝖢𝖮𝖭𝖳𝖱𝖨𝖡𝖴𝖳𝖮𝖱𝖲 |
 ----------------
 {list_of_users}"""
